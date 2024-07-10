@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <form class="signup-form" id="signupForm">
+            <div class="form-group">
+                <label for="nickname">Nickname (optional)</label>
+                <input type="text" id="nickname" name="nickname">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <small id="emailError" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                <small id="passwordError" class="error-message"></small>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <p class="terms">
+                I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy & Security Policy</a>.
+            </p>
+            <div class="social-signup">
+                <p>Sign up with</p>
+                <div id="g_id_onload"
+                    data-client_id="570338457082-kc941cclgijuo0qs0nsejudintn0chvu.apps.googleusercontent.com"
+                    data-context="signup"
+                    data-ux_mode="popup"
+                    data-login_uri="https://your-backend.example.com/tokensignin"
+                    data-auto_prompt="false"
+                    data-callback="handleCredentialResponse">
+                </div>
+                <div class="g_id_signin" data-type="standard"></div>
+                <button type="button" class="social-btn facebook" id="facebookBtn">Facebook</button>
+            </div>
+            <p class="signin-link">
+                Have an account already? <a href="#">Sign In</a>
+            </p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
